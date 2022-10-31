@@ -11,7 +11,7 @@ class Stats:
     def __init__(self, data: list[float]):  
         
         # Run validations to the received arguments
-        assert isinstance(data, list), 'Please input a list for x.'
+        assert isinstance(data, list[float]), 'Please input a list for x of type int and or float.'
 
         # data statistics
         self.x = data
@@ -54,8 +54,8 @@ class Dual_Stat(Stats):
     def __init__(self, data1: list[float], data2: list[float]):
         
         # Run validations to the received arguments
-        assert isinstance(data1, list), 'Please input a list for x.'
-        assert isinstance(data2, list), 'Please input a list for y.'
+        assert isinstance(data1, list[float]), 'Please input a list for x of type int and or float.'
+        assert isinstance(data2, list[float]), 'Please input a list for y of type int and or float.'
         # Check lengths of lists
         assert len(data1) == len(data2), 'Your lists are of different lengths.'
         
