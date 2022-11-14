@@ -19,15 +19,9 @@ class Stats:
         self.n = len(data)
         self.sum = sum(data)
         self.av = self.sum / self.n
-        
-        if self.n > 1:
-            self.vari = sum([(x - self.av)**2 for x in self.x]) / (self.n - 1)
-            self.std = self.vari ** (1/2)
-            
-        else:
-            self.vari = None
-            self.std = None
-    
+        self.vari = sum([(x - self.av)**2 for x in self.x]) / (self.n - 1)
+        self.std = self.vari ** (1/2)
+
     # mean calculator
     def mean(self): 
         return self.av
