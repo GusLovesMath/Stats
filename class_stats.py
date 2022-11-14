@@ -11,6 +11,7 @@ class Stats:
     def __init__(self, data: list[float]):  
         
         # Run validations to the received arguments
+        assert len(data) > 1, f'Please make sure your list is of length greater than 1.'
         assert isinstance(data, list[float]), 'Please input a list for x of type int and or float.'
 
         # data statistics
