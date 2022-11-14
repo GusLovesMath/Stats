@@ -19,8 +19,14 @@ class Stats:
         self.n = len(data)
         self.sum = sum(data)
         self.av = self.sum / self.n
-        self.vari = sum([(x - self.av)**2 for x in self.x]) / (self.n - 1)
-        self.std = self.vari ** (1/2)
+        
+        if self.n > 1:
+            self.vari = sum([(x - self.av)**2 for x in self.x]) / (self.n - 1)
+            self.std = self.vari ** (1/2)
+            
+        else:
+            self.vari = None
+            self.std = None
     
     # mean calculator
     def mean(self): 
@@ -57,7 +63,9 @@ class Dual_Stat(Stats):
         # Run validations to the received arguments
         assert isinstance(data1, list[float]), 'Please input a list for x of type int and or float.'
         assert isinstance(data2, list[float]), 'Please input a list for y of type int and or float.'
+        
         # Check lengths of lists
+        assert len(data1) > 1, 'Make sure your data is of lengh greater than 1'
         assert len(data1) == len(data2), 'Your lists are of different lengths.'
         
         # Length of data sets
