@@ -6,5 +6,6 @@ you to use and see how this class opperates.
 Please give credit to Math & Physics fun if you used or found this 
 helpful.
 
-Author: Math and Physics Fun With Gus\\
+Author: Math and Physics Fun With Gus
+
 Date: October 31, 2022
